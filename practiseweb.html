@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAV BAR PRACTISE </title>
+    <style>
+        * {
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .navbar ul {
+            height: 80px;
+            width: 100%;
+            background-color: rgb(192, 48, 48);
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+        }
+
+        .logo {
+            margin: 80px;
+        }
+
+        .navbar ul li {
+            margin: 40px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            padding: 12px;
+
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgb(248, 248, 248);
+            color: black;
+            transition: 1s;
+
+        }
+
+        .src {
+            margin: 23px;
+        }
+
+        .src input {
+            width: 400px;
+            height: 30px;
+        }
+
+        ::placeholder {
+            text-align: center;
+
+        }
+
+        .btn input {
+            border-color: transparent;
+            width: 100px;
+            height: 25px;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(172, 123, 123);
+        }
+
+        .container {
+            width: 100%;
+            height: 700%;
+            border: 5px solid black;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 100px;
+
+
+        }
+
+        .container2 {
+            width: 100%;
+            height: 900%;
+            margin-top: -95px;
+            border: 5px solid black;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+
+        }
+
+        .card {
+            height: 400px;
+            width: 350px;
+            border: 2px solid black;
+            background-color: cyan;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 23px 14px 12px black;
+            text-shadow: 1px 1px 6px gold;
+            border-radius: 10%;
+
+        }
+
+        .card:hover {
+            transform: scale(1.2);
+            box-shadow: 23px 14px 20px gray;
+            color: red;
+            background-color: lightgreen;
+            transition: 1s;
+        }
+
+        .sha {
+            box-shadow: 12px 12px 23px black;
+            border-radius: 10%;
+        }
+
+        .container3 {
+            width: 100%;
+            height: 800%;
+            margin-top: 10px;
+            border: 5px solid black;
+            background-color: yellow;
+            display: flex;
+            column-gap: 50px;
+            padding-left: 100px;
+
+        }
+
+        .card1 {
+            height: 600px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card1 p {
+            word-break: (20px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <div class="logo"><img
+                    src="data:image/jpeg;base64,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"
+                    height="50px" width="70px" alt=""> </div>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> About</a></li>
+            <li><a href="#"> Contact</a></li>
+            <li><a href="#"> services</a></li>
+            <div class="src"><input type="search" name="src" id="src" placeholder="search......"> </div>
+            <div class="btn"> <input type="submit" value="search"></div>
+        </ul>
+    </nav>
+    <h1> FREE CSS TEMPLATES </h1>
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur quidem voluptatem veritatis saepe
+        dolor minima maiores quod iste quisquam totam quaerat, vitae ipsum? Error nisi vitae sequi id iusto?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, a ipsa facere ex consequatur corporis
+        explicabo pariatur saepe odit quibusdam assumenda harum doloribus aut dolores culpa numquam inventore est nam!
+    </h5> <br> <br>
+    <h1> MEGA DEVLOPMENT PROJECT </h1>
+    <div class="container">
+
+        <div class="card">
+            <img src="img6.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div>
+
+        <div class="card">
+            <img src="img4.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div> <br>
+
+        <div class="card">
+            <img src="img5.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="card">
+            <img src="img5.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div>
+
+        <div class="card">
+            <img src="img5.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div>
+
+        <div class="card">
+            <img src="img5.avif" class="sha" alt="" height="50%" width="80%">
+            <h1> Lorem ipsum dolor sit amet </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi fuga optio cupiditate? Dolorum, at
+                eveniet iusto dignissimos sint quaerat temporibus, ex, accusantium delectus repudiandae itaque unde?
+                Facilis, nemo quas!</p>
+        </div>
+    </div>
+
+    <div class="container3">
+        <div class="card1">
+            <h1> EVENTS</h1> <br>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi totam mollitia accusantium dolore
+                molestias adipisci architecto necessitatibus, odio itaque velit nobis eos nihil eveniet debitis libero,
+                laborum saepe recusandae nulla!</p>
+        </div>
+
+        <div class="card1">
+            <h1>PARTNERS</h1> <br>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga voluptatibus possimus, quae commodi
+                deserunt quia expedita nisi explicabo recusandae ducimus qui dicta tempore, numquam ut aut reiciendis
+                quidem odit esse?</p>
+        </div>
+
+        <div class="card1">
+            <h1> proflie </h1> <br>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis fugit fugiat obcaecati nobis illum?
+                Blanditiis.</p> <br>
+            <h2> join us </h2>
+            <p> Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+
+        <div class="card1">
+            <h1> HTML + CSS </h1>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ullam, culpa harum, fugit consectetur at
+                aperiam magnam eligendi odio iusto aliquam? Ipsa hic quas explicabo molestiae laborum nobis magni
+                commodi.</p>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

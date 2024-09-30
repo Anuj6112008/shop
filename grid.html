@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid{
+            display: grid;
+            background-color: purple;
+            height: 800px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 12px;
+            padding: 12px;
+            /* grid-template-columns: 200px 400px 300px;
+            grid-template-rows: 200px 100px 100px; */
+        }
+        .card{
+          
+            border: 2px solid black;
+        }
+        #c1{
+            background: url('/background.jpg') no-repeat center/cover;
+        }
+        #c2{
+            background: url('/bg2.jpg') no-repeat center/cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+       <div id="c1" class="card">
+        <h1>Card - 1</h1>
+       </div>
+       <div id="c2" class="card">
+        <h1>Card - 2</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 3</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 4</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 5</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 6</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 7</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 8</h1>
+       </div>
+       <div class="card">
+        <h1>Card - 9</h1>
+       </div>
+    </div>
+</body>
+</html>

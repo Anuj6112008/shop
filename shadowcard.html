@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card's</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 700px;
+            border: 5px solid black;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            height: 450px;
+            width: 350px;
+            border: 2px solid black;
+            background-color: teal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 23px 14px 12px black;
+            border-top-left-radius: 12%;
+            border-bottom-right-radius: 12%;
+            border-top-right-radius: 12%;
+            border-bottom-left-radius: 12%;
+
+
+        }
+
+        .card:hover {
+            transform: scale(1.2);
+            box-shadow: 23px 14px 23px;
+            color: red;
+            background-color: yellow;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="img1.avif" alt="" height="50%" width="80%">
+            <h1> CAR</h1>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis deserunt mollitia, laboriosam quibusdam
+                eos accusantium ullam molestias distinctio dicta rem, hic, blanditiis tenetur perspiciatis assumenda
+                quia harum doloremque placeat ea.</p>
+        </div>
+
+        <div class="card">
+            <img src="img2.avif" alt="" height="50%" width="80%">
+            <h1>BIKE</h1>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis deserunt mollitia, laboriosam quibusdam
+                eos accusantium ullam molestias distinctio dicta rem, hic, blanditiis tenetur perspiciatis assumenda
+                quia harum doloremque placeat ea.</p>
+        </div>
+
+        <div class="card">
+            <img src="img3.avif" alt="" height="50%" width="80%">
+            <h1> CYCLE </h1>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis deserunt mollitia, laboriosam quibusdam
+                eos accusantium ullam molestias distinctio dicta rem, hic, blanditiis tenetur perspiciatis assumenda
+                quia harum doloremque placeat ea.</p>
+        </div>
+
+        
+
+</body>
+
+</html>
