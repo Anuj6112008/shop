@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> STUDENTS DETAILS </title>
+    <style>
+        #submit{
+            background-color: yellow; color: red;
+            border: 2px solid white; padding: 10px; cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid darkblue;
+            height: 35px;
+            width: 90px;
+            
+        }
+        #reset{
+            background-color: red; color: white;
+            border: 2px solid white; padding: 10px; cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid darkblue;
+            
+        }
+    </style>
+</head>
+<body bgcolor="green">
+    <center>
+        
+        <form name="frm">
+            <fieldset>
+            <legend><b> STUDENT DETAILS </b></legend>
+                <h1> STUDENT DETAILS </h1>
+
+            STUDENTS NAMES :<select name="names">
+                <option value="SELECTED" selected>~SELECT~</option>
+                <option value="anuj">ANUJ</option>
+                <option value="shrikant">SHRIKANT</option>
+                <option value="abhinav">ABHINAV</option>
+                <option value="piyush">PIYUSH</option>
+                <option value="ayan">AAYAN</option>
+            </select><BR><BR>
+
+            <label for="sno.">SEAT NUMBER :</label>
+            <input type="text" id="sno" name="sno." disabled><br><br>
+            
+            <label for="tmarks">TOTAL MARKS :</label>
+            <input type="text" id="tmarks" name="tmarks" disabled><br><br>
+
+            <label for="tper"> TOTAL PERCENTAGE :</label>
+            <input type="text" id="tper" name="tper" disabled><br><br>
+
+            <label for="grade">GRADE :</label>
+            <input type="text" id="grade" name="grade" disabled><br><br>
+
+            <label for="porf"> PASSED : </label>
+            <input type="text" id="porf" name="porf" disabled><br><br>
+
+            <input type="button" id="submit" value="submit" onclick="print()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" id="reset" value="reset">
+                
+
+        </fieldset>
+        </form>
+    </center>
+    
+    
+    <script>
+        var sno,tmarks,tper,grade,porf;
+        
+        function print(){
+            check();
+            alert(` total marks : ${tmarks} total percentage : ${tper}`);
+        }
+
+        function check(){
+            
+            var names = document.frm.names.value;
+            
+            
+            
+            switch(names){
+                
+                case "anuj":
+                sno = "MH101";
+                tmarks = "85";
+                tper = "91%";
+                grade = "A";
+                porf = "TRUE"
+                break;
+                
+                case "shrikant":
+                sno = "mh7445";
+                tmarks = "285";
+                tper = "82%";
+                grade = "B";
+                porf = "TRUE"
+                break;
+                
+                case "abhinav":
+                sno = "mh101";
+                tmarks = "185";
+                tper = "83%";
+                grade = "C";
+                porf = "TRUE"
+                break;
+                
+                case "piyush":
+                sno = "mh554101";
+                tmarks = "255";
+                tper = "84%";
+                grade = "A";
+                porf = "TRUE"
+                break;
+                
+                case "ayan":
+                sno = "mh4421";
+                tmarks = "254";
+                tper = "85%";
+                grade = "B";
+                porf = "TRUE"
+                break;
+                
+                default:
+                break;
+                
+                
+            }
+            document.frm.grade.value = grade;
+            document.frm.tmarks.value = tmarks;
+            document.frm.tper.value = tper;
+            document.frm.sno.value = sno;
+            document.frm.porf.value = porf;
+        }
+    </script>
+</body>
+</html>
